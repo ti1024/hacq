@@ -1,0 +1,94 @@
+name:           hacq
+version:        0.1
+cabal-version:  >= 1.10
+build-type:     Simple
+author:         Tsuyoshi Ito
+synopsis:       Monadic combinators for quantum circuits
+license:        BSD3
+license-file:   LICENSE
+copyright:      Copyright (c) 2013 NEC Laboratories America, Inc.
+
+library
+  hs-source-dirs:    src
+  default-language:  Haskell2010
+  build-depends:
+                   base >= 4,
+                   containers,
+                   mtl,
+                   unordered-containers,
+                   hashable,
+                   fingertree,
+                   bytestring,
+                   blaze-builder,
+                   hashtables,
+                   directory,
+                   filepath
+  other-extensions:
+                   BangPatterns,
+                   DeriveDataTypeable,
+                   DeriveFoldable,
+                   DeriveFunctor,
+                   DeriveTraversable,
+                   FlexibleContexts,
+                   FlexibleInstances,
+                   FunctionalDependencies,
+                   GeneralizedNewtypeDeriving,
+                   KindSignatures,
+                   MultiParamTypeClasses,
+                   RankNTypes,
+                   StandaloneDeriving,
+                   UndecidableInstances
+  ghc-options:       -Wall -rtsopts -fno-ignore-asserts
+  exposed-modules:
+                   Control.Monad.Ask.Class,
+                   Control.Monad.Memo,
+                   Control.Monad.Memo.Class,
+                   Control.Monad.Memo.Null,
+                   Control.Monad.Quantum.Adder,
+                   Control.Monad.Quantum.ApproxSequence.Class,
+                   Control.Monad.Quantum.Base.CircuitBuilder,
+                   Control.Monad.Quantum.Base.Class,
+                   Control.Monad.Quantum.Base.Counter,
+                   Control.Monad.Quantum.CircuitBuilder,
+                   Control.Monad.Quantum.CircuitBuilder.Class,
+                   Control.Monad.Quantum.CircuitBuilderToffoli,
+                   Control.Monad.Quantum.Class,
+                   Control.Monad.Quantum.Control,
+                   Control.Monad.Quantum.Counter,
+                   Control.Monad.Quantum.Counter.Class,
+                   Control.Monad.Quantum.PhaseShift.Binary.Class,
+                   Control.Monad.Quantum.PhaseShift.Binary.Counter,
+                   Control.Monad.Quantum.PhaseShift.Binary.FourierTransform,
+                   Control.Monad.Quantum.PhaseShift.Binary.Kickback,
+                   Control.Monad.Quantum.PhaseShift.Binary.Kickback.Estimate,
+                   Control.Monad.Quantum.PhaseShift.Binary.Kickback.ResourceState,
+                   Control.Monad.Quantum.PhaseShift.Binary.Null,
+                   Control.Monad.Quantum.PhaseShift.CircuitBuilder,
+                   Control.Monad.Quantum.PhaseShift.Class,
+                   Control.Monad.Quantum.PhaseShift.Counter,
+                   Control.Monad.Quantum.PhaseShift.Estimate,
+                   Control.Monad.Quantum.PhaseShift.Null,
+                   Control.Monad.Quantum.PhaseShift.SQCT,
+                   Control.Monad.Quantum.SQCT,
+                   Control.Monad.Quantum.Toffoli.Class,
+                   Control.Monad.Quantum.Toffoli.ToStandard,
+                   Data.MexSet,
+                   Data.Quantum.Circuit,
+                   Data.Quantum.Circuit.Class,
+                   Data.Quantum.Circuit.Invert,
+                   Data.Quantum.Circuit.MinimizeWireIndices,
+                   Data.Quantum.Circuit.QC,
+                   Data.Quantum.Cost.Class,
+                   Data.Quantum.Cost.TotalCalls,
+                   Data.Quantum.Cost.TotalGates,
+                   Data.Quantum.Cost.Width,
+                   Data.Quantum.CountKey,
+                   Data.Quantum.Gate,
+                   Data.Quantum.PhaseShift.Binary.Stat,
+                   Data.Quantum.PhaseShift.Count,
+                   Data.Quantum.PhaseShift.GatePhaseShift,
+                   Data.Quantum.SQCT,
+                   Data.Quantum.Wire,
+                   Data.Void
+  other-modules:
+                   Util

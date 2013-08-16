@@ -1,0 +1,17 @@
+# Default to automatic detection
+* text=auto
+
+# Files in any directory
+*.bib text
+*.bst text
+*.cabal text
+*.hs text
+*.tex text
+*.txt text
+*.qc text
+.gitattributes text
+.gitignore text
+
+# Files in this directory
+/LICENSE text
+/sqct.in text
